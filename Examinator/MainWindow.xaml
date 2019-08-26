@@ -5,13 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Examinator"
         mc:Ignorable="d" FontSize="14"
-        Title="Examinator - Question Builder" Height="450" Width="800"  Background="#FF232323" Foreground="#FFE0E0E0">
+        Title="Examinator - Question Builder" Height="541" Width="800"  Background="#FF232323" Foreground="#FFE0E0E0">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
             <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="20"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -21,15 +22,16 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Column="1"  Grid.Row="1" Text="Please enter your question:" Margin="4" />
-        <TextBox Name="questionText" Grid.Column="1" Grid.Row="2" Margin="4" />
-        <Button Grid.Column="2" Grid.Row="2" Content="Attach Image" Margin="4" Padding="14,4,14,4"/>
+        <TextBlock Grid.Column="1"  Grid.Row="1" Text="Please enter your question:" Margin="4" Padding="4" />
+        <TextBox Name="questionText" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Margin="4" Padding="4" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" Height="100"/>
+        <Button Grid.Column="3" Grid.Row="2" Content="Attach Image" Margin="4" Padding="14,4,14,4" Width="Auto" VerticalAlignment="Bottom"/>
 
-        <GroupBox Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="3" Header="Possible Answers" Background="#FF232323" Margin="4,24,4,4">
+        <GroupBox Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="3" Header="Possible Answers" Background="#FF232323" Margin="4,24,4,4">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="20"/>
@@ -48,23 +50,24 @@
                     <RowDefinition Height="20"/>
                 </Grid.RowDefinitions>
 
-                <TextBlock Grid.Column="1" Grid.Row="1" Text="Correct answer" Margin="4"/>
-                <TextBox Grid.Column="2" Grid.Row="1" Name="correctAnswer" Text="42" Margin="4" />
+                <TextBlock Grid.Column="1" Grid.Row="1" Text="Correct answer" Margin="4" Padding="4" />
+                <TextBox Grid.Column="2" Grid.Row="1" Name="correctAnswer" Text="42" Margin="4" Padding="4" />
 
-                <Rectangle Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="2" Height="1" Width="auto" Stroke="#FFEEE3E3" Margin="4"/>
+                <Rectangle Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="2" Height="1" Width="auto" Stroke="#FFEEE3E3" Margin="4" />
 
-                <TextBlock Grid.Column="1" Grid.Row="3" Text="Alternative answer 1" Margin="4" />
-                <TextBox Name="answer1" Grid.Column="2" Grid.Row="3" Text="Answer text 1" Margin="4" />
+                <TextBlock Grid.Column="1" Grid.Row="3" Text="Alternative answer 1" Margin="4" Padding="4" />
+                <TextBox Name="answer1" Grid.Column="2" Grid.Row="3" Text="Answer text 1" Margin="4" Padding="4" />
 
-                <TextBlock Grid.Column="1" Grid.Row="4" Text="Alternative answer 2" Margin="4" />
-                <TextBox Name="answer2" Grid.Column="2" Grid.Row="4" Text="Answer text 2" Margin="4" />
+                <TextBlock Grid.Column="1" Grid.Row="4" Text="Alternative answer 2" Margin="4" Padding="4" />
+                <TextBox Name="answer2" Grid.Column="2" Grid.Row="4" Text="Answer text 2" Margin="4" Padding="4" />
 
-                <TextBlock Grid.Column="1" Grid.Row="5" Text="Alternative answer 3" Margin="4" />
-                <TextBox Name="answer3" Grid.Column="2" Grid.Row="5" Text="Answer text 3" Margin="4" />
-
+                <TextBlock Grid.Column="1" Grid.Row="5" Text="Alternative answer 3" Margin="4" Padding="4" />
+                <TextBox Name="answer3" Grid.Column="2" Grid.Row="5" Text="Answer text 3" Margin="4" Padding="4" />
             </Grid>
 
         </GroupBox>
+
+        <Button Grid.Column="3" Grid.Row="6" Content="Create Question" Margin="4" Padding="14,4,14,4" Width="Auto"/>
 
     </Grid>
 </Window>
