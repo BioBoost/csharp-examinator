@@ -10,22 +10,24 @@ namespace Examinator
     {
         public override List<Course> GetAllCourses()
         {
-            return new List<Course>
+            courses = new List<Course>
             {
-                new Course {Name = "Object Oriented Programming" },
-                new Course {Name = "Introdution to Programmin" },
-                new Course {Name = "IoT Devices" }
+                new Course {Id = 1, Name = "Object Oriented Programming" },
+                new Course {Id = 2, Name = "Introdution to Programmin" },
+                new Course {Id = 3, Name = "IoT Devices" }
             };
+            return courses;
         }
 
         public override Question CreateQuestion(Question question)
         {
             question.Id = lastQuestionId++;
-            questions.Add(question);
+            Course course = courses.Where(c => c.Id == question.Course.Id).First();
+            course.Questions.Add(question);
             return question;
         }
 
         private int lastQuestionId = 0;
-        private List<Question> questions = new List<Question>();
+        private List<Course> courses;
     }
 }
