@@ -14,5 +14,20 @@ namespace Examinator
             get { return name; }
             set { name = value; }
         }
+
+        private int id;
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
+
+        private List<Question> questions;
+        public List<Question> Questions
+        {
+            get { return questions; }
+            set { questions = value; }
+        }
+
     }
 }
