@@ -48,12 +48,12 @@
         </Grid.RowDefinitions>
         
         <TextBlock Grid.Column="1"  Grid.Row="1" Text="Please select course:"/>
-        <ComboBox Grid.Column="2"  Grid.Row="1" >
+        <ComboBox Name="courseSelection" Grid.Column="2"  Grid.Row="1" >
             <ComboBoxItem Content="Introduction to Programming"></ComboBoxItem>
             <ComboBoxItem Content="Object Oriented Programming"></ComboBoxItem>
         </ComboBox>
 
-        <Button Grid.Column="3" Grid.Row="2" Content="Create Questions" />
+        <Button Name="startCreatingQuestions" Grid.Column="3" Grid.Row="2" Content="Create Questions" Click="StartCreatingQuestions_Click" />
 
 
     </Grid>

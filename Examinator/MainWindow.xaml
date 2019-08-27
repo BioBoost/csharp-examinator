@@ -94,5 +94,7 @@
 
         <Button Grid.Column="3" Grid.Row="6" Content="Create Question" />
 
+        <TextBlock Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="3" FontSize="10" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Currently creating questions for " />
+
     </Grid>
 </Window>

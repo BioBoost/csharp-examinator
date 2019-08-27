@@ -23,5 +23,11 @@ namespace Examinator
         {
             InitializeComponent();
         }
+
+        private void StartCreatingQuestions_Click(object sender, RoutedEventArgs e)
+        {
+            string course = courseSelection.Text;
+            Console.WriteLine("Course = " + course);
+        }
     }
 }
