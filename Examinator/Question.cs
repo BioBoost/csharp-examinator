@@ -8,6 +8,8 @@ namespace Examinator
 {
     public class Question
     {
+        public Question() {}
+
         public Question(string text)
         {
             Text = text;
