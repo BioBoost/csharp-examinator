@@ -28,8 +28,9 @@ namespace Examinator
         }
 
         private Course currentCourse = new Course { Name = "unknown" };
+        private Database database = new FakeDatabase();
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void CreateQuestion_Click(object sender, RoutedEventArgs e)
         {
             Question question = new Question(questionText.Text);
             question.AddAnswer(new Answer(correctAnswer.Text, true));
@@ -39,7 +40,5 @@ namespace Examinator
             database.CreateQuestion(question);
             Console.WriteLine("Question succesfully created with id = " + question.Id);
         }
-
-        private Database database = new FakeDatabase();
     }
 }
