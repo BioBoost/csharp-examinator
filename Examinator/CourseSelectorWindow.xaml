@@ -5,8 +5,56 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Examinator"
         mc:Ignorable="d" FontSize="14"
-        Title="Examinator - Course Selection" Height="541" Width="800"  Background="#FF232323" Foreground="#FFE0E0E0">
+        Title="Examinator - Course Selection" Height="185" Width="553"  Background="#FF232323" Foreground="#FFE0E0E0">
+
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="4" />
+            <Setter Property="Padding" Value="4" />
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="4" />
+            <Setter Property="Padding" Value="4" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="4" />
+            <Setter Property="Padding" Value="14,4,14,4" />
+            <Setter Property="Background" Value="Black" />
+            <Setter Property="Foreground" Value="#FFE0E0E0" />
+        </Style>
+    </Window.Resources>
+
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
         
+        <TextBlock Grid.Column="1"  Grid.Row="1" Text="Please select course:"/>
+        <ComboBox Grid.Column="2"  Grid.Row="1" >
+            <ComboBoxItem Content="Introduction to Programming"></ComboBoxItem>
+            <ComboBoxItem Content="Object Oriented Programming"></ComboBoxItem>
+        </ComboBox>
+
+        <Button Grid.Column="3" Grid.Row="2" Content="Create Questions" />
+
+
     </Grid>
 </Window>
