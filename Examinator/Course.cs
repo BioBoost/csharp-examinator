@@ -22,7 +22,7 @@ namespace Examinator
             set { id = value; }
         }
 
-        private List<Question> questions;
+        private List<Question> questions = new List<Question>();
         public List<Question> Questions
         {
             get { return questions; }
