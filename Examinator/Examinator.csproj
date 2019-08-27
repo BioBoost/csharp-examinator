@@ -55,10 +55,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Exam.cs" />
     <Compile Include="ExamBuilderWindow.xaml.cs">
       <DependentUpon>ExamBuilderWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Question.cs" />
+    <Compile Include="WordExam.cs" />
     <Page Include="CourseSelectorWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
