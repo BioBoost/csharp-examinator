@@ -31,5 +31,13 @@ namespace Examinator
             window.Show();
             this.Close();
         }
+
+        private void StartBuildingExam_Click(object sender, RoutedEventArgs e)
+        {
+            string courseName = courseSelection.Text;
+            ExamBuilderWindow window = new ExamBuilderWindow();
+            window.Show();
+            this.Close();
+        }
     }
 }

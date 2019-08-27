@@ -1,11 +1,11 @@
-﻿<Window x:Class="Examinator.CourseSelectorWindow"
+﻿<Window x:Class="Examinator.ExamBuilderWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Examinator"
-        mc:Ignorable="d" FontSize="14"
-        Title="Examinator - Course Selection" Height="185" Width="553"  Background="#FF232323" Foreground="#FFE0E0E0">
+        mc:Ignorable="d"
+        Title="Examinator - Exam Builder" Height="541" Width="800"  Background="#FF232323" Foreground="#FFE0E0E0">
 
     <Window.Resources>
         <Style TargetType="TextBlock">
@@ -34,28 +34,38 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
-            <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="20"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
-        
-        <TextBlock Grid.Column="1"  Grid.Row="1" Text="Please select course:"/>
-        <ComboBox Name="courseSelection" Grid.Column="2"  Grid.Row="1" >
-            <ComboBoxItem Content="Introduction to Programming"></ComboBoxItem>
-            <ComboBoxItem Content="Object Oriented Programming"></ComboBoxItem>
-        </ComboBox>
 
-        <Button Name="startCreatingQuestions" Grid.Column="2" Grid.Row="3" Content="Create Questions" Click="StartCreatingQuestions_Click" />
-        <Button Name="startBuildingExam" Grid.Column="3" Grid.Row="3" Content="Build Exam" Click="StartBuildingExam_Click" />
+        <GroupBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Header="Select questions for Exam" >
+
+        </GroupBox>
+
+        <GroupBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Header="Question Preview" >
+            <StackPanel>
+                <TextBlock x:Name="questionText" Text="This is suppose to be the preview question itself?" FontWeight="Bold" />
+                <TextBlock x:Name="answer1" Text="1. Here we place the first answer" Margin="32,4,4,4" />
+                <TextBlock x:Name="answer2" Text="2. Maybe a second possible answer goes here" Margin="32,4,4,4" />
+                <TextBlock x:Name="answer3" Text="3. This is probable not the correct one" Margin="32,4,4,4" />
+                <TextBlock x:Name="answer4" Text="4. This is just some backup answer. Might be correct dough" Margin="32,4,4,4" />
+            </StackPanel>
+        </GroupBox>
+
+        <Button Name="back" Content="Back" Grid.Column="1" Grid.Row="3" Click="Back_Click" />
+        <Button Name="buildExam" Content="Build Exam" Grid.Column="3" Grid.Row="3" />
+
+        <TextBlock Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="3" Text="Currently selected 12 questions" HorizontalAlignment="Center"/>
 
     </Grid>
 </Window>
