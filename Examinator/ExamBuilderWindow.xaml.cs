@@ -30,5 +30,13 @@ namespace Examinator
             window.Show();
             this.Close();
         }
+
+        private void BuildExam_Click(object sender, RoutedEventArgs e)
+        {
+            Exam exam = new WordExam();
+            Database database = new FakeDatabase();
+            exam.Questions = database.GetAllCourses().First().Questions;
+            exam.Generate();
+        }
     }
 }

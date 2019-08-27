@@ -63,7 +63,7 @@
         </GroupBox>
 
         <Button Name="back" Content="Back" Grid.Column="1" Grid.Row="3" Click="Back_Click" />
-        <Button Name="buildExam" Content="Build Exam" Grid.Column="3" Grid.Row="3" />
+        <Button Name="buildExam" Content="Build Exam" Grid.Column="3" Grid.Row="3" Click="BuildExam_Click" />
 
         <TextBlock Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="3" Text="Currently selected 12 questions" HorizontalAlignment="Center"/>
 
