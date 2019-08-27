@@ -92,7 +92,7 @@
 
         </GroupBox>
 
-        <Button Grid.Column="3" Grid.Row="6" Content="Create Question" />
+        <Button Grid.Column="3" Grid.Row="6" Content="Create Question" Click="Button_Click" />
 
         <TextBlock Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="3" FontSize="10" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="{Binding Name, Mode = OneWay, StringFormat=Currently adding questions for {0}}" />
 
