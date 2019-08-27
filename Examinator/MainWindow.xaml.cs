@@ -40,5 +40,12 @@ namespace Examinator
             database.CreateQuestion(question);
             Console.WriteLine("Question succesfully created with id = " + question.Id);
         }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            CourseSelectorWindow window = new CourseSelectorWindow();
+            window.Show();
+            this.Close();
+        }
     }
 }

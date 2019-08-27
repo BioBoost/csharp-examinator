@@ -29,6 +29,7 @@ namespace Examinator
             string courseName = courseSelection.Text;
             MainWindow window = new MainWindow(new Course { Name = courseName });
             window.Show();
+            this.Close();
         }
     }
 }
