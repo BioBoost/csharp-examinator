@@ -8,13 +8,13 @@ namespace Examinator
 {
     public class FakeDatabase : Database
     {
-        public override List<string> GetAllCourses()
+        public override List<Course> GetAllCourses()
         {
-            return new List<string>
+            return new List<Course>
             {
-                "Object Oriented Programming",
-                "Introdution to Programmin",
-                "IoT Devices"
+                new Course {Name = "Object Oriented Programming" },
+                new Course {Name = "Introdution to Programmin" },
+                new Course {Name = "IoT Devices" }
             };
         }
     }
