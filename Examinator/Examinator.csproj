@@ -67,6 +67,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Course.cs" />
     <Compile Include="CourseSelectorWindow.xaml.cs">
       <DependentUpon>CourseSelectorWindow.xaml</DependentUpon>
     </Compile>
