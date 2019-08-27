@@ -20,9 +20,13 @@ namespace Examinator
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public MainWindow(Course course)
         {
+            currentCourse = course;
             InitializeComponent();
+            this.DataContext = currentCourse;
         }
+
+        private Course currentCourse = new Course { Name = "unknown" };
     }
 }

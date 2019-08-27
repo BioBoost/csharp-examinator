@@ -26,8 +26,9 @@ namespace Examinator
 
         private void StartCreatingQuestions_Click(object sender, RoutedEventArgs e)
         {
-            string course = courseSelection.Text;
-            Console.WriteLine("Course = " + course);
+            string courseName = courseSelection.Text;
+            MainWindow window = new MainWindow(new Course { Name = courseName });
+            window.Show();
         }
     }
 }
