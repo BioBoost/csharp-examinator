@@ -9,5 +9,6 @@ namespace Examinator
     public abstract class Database
     {
         public abstract List<Course> GetAllCourses();
+        public abstract Question CreateQuestion(Question question);
     }
 }

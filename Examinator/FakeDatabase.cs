@@ -17,5 +17,15 @@ namespace Examinator
                 new Course {Name = "IoT Devices" }
             };
         }
+
+        public override Question CreateQuestion(Question question)
+        {
+            question.Id = lastQuestionId++;
+            questions.Add(question);
+            return question;
+        }
+
+        private int lastQuestionId = 0;
+        private List<Question> questions = new List<Question>();
     }
 }
