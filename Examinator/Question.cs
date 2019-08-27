@@ -44,5 +44,13 @@ namespace Examinator
             get { return id; }
             set { id = value; }
         }
+
+        private Course course;
+        public Course Course
+        {
+            get { return course; }
+            set { course = value; }
+        }
+
     }
 }
